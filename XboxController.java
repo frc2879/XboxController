@@ -257,7 +257,7 @@ public class XboxController extends Joystick {
          * @return Y but with a deadzone
          */
         private double rawY() {
-            final double rawInput = -parent.getRawAxis(yAxisID);    // -Y was up on our thumbsticks. Consider this a fix?
+            final double rawInput = parent.getRawAxis(yAxisID);    // The original version reversed this, that is not needed for ours
             
             return createDeadZone(rawInput, yDeadZone);
         }
