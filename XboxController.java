@@ -1,4 +1,4 @@
-package org.usfirst.frc.team4624.robot.input;   // Change to whatever package you would like
+package com.frc2879.xboxcontroller;   // Change to whatever package you would like
 
 
 
