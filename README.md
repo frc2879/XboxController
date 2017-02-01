@@ -1,8 +1,8 @@
-# XboxController #
+# XboxController
 This class wraps around the Joystick class in order to make working with Xbox360 controllers less of a pain. The values from this class can be used in two ways.
 You could either check each Button every cycle with .get(), or you could call commands directly from the Buttons with .whenPressed()
 
-### USAGE: ###
+## Usage
 Initialization
 ````
 myXboxController = new XboxController( <port the controller is on (starts at 0)> );
@@ -24,7 +24,3 @@ Support of legacy methods (NOTE: These values are straight from the Joystick cla
 ````
 if( xboxController.getX() > .4 ) ...
 ````
-
-### NOTES: ###
-Although we have confidence that this will work, not everything has been tested.
-This should work for the 2015 WPILib. The mappings of axis's and buttons may change in later years.
