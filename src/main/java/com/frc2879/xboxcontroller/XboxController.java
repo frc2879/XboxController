@@ -7,40 +7,16 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-
-
 /**
- * [class] XboxController
- * @author AJ Granowski & 4624 Owatonna Robotics
- * @version 2015
- * 
  * This class wraps around the Joystick class in order to make
  *     working with Xbox360 controllers less of a pain.
  * 
  * The values from this class can be used in two ways. One could
  *     either check each Button every cycle with .get(), or they
  *     could call commands directly from the Buttons with .whenPressed()
- * 
- * USAGE:
- *     // Initialization
- *     myXboxController = new XboxController( <port the controller is on (starts at 0)> );
- *     myXboxController.leftStick.setThumbstickDeadZone( .2 );  // Optional. See code below for defaults.
  *     
- *     // Using buttons
- *     myXboxController.a.whenPressed( new MyCommand() );
- *     myXboxController.lb.toggleWhenPressed( new MyCommand() );
- *     myXboxController.rightStick.whenPressed( new MyCommand() );
- *     
- *     // Getting values directly
- *     if( myXboxController.leftStick.getY() > .4 ) ...
- *     
- *     // Support of legacy methods (NOTE: These values are straight from the Joystick class. No deadzone stuff or anything)
- *     if( xboxController.getX() > .4 ) ...
- * 
- * NOTES:
- *     Although I have confidence that this will work, not everything has been tested.
- *     This should work for the 2015 WPILib. The mappings of axis's and buttons may change in later years.
- *     I am not a good Java programmer.
+ * @author AJ Granowski and 4624 Owatonna Robotics
+ * @version 1.0
  */
 public class XboxController extends Joystick {
     
@@ -173,7 +149,7 @@ public class XboxController extends Joystick {
         
         /**
          * Convert integers to DPAD values
-         * @param value
+         * @param angle
          * @return DPAD with matching angle
          */
         public static DPAD getEnum(int angle) {
@@ -366,7 +342,7 @@ public class XboxController extends Joystick {
         }
         
         /**
-         * Get the adjusted thumbstick position (Magnitude <= 1)
+         * Get the adjusted thumbstick position (Magnitude {@literal<= 1})
          * @return True thumbstick position
          */
         public double getTrueX() {
@@ -378,7 +354,7 @@ public class XboxController extends Joystick {
         }
         
         /**
-         * Get the adjusted thumbstick position (Magnitude <= 1)
+         * Get the adjusted thumbstick position (Magnitude {@literal<= 1})
          * @return True thumbstick position
          */
         public double getTrueY() {
